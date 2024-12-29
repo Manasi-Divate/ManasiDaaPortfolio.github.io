@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            overflow: auto; /* Allow scrolling if needed */
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #5DBB63;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            max-height: 90vh; /* Ensure content fits within the viewport */
+            overflow-y: auto; /* Add vertical scrolling for overflow */
+            margin: 20px;
+        }
+        h2 {
+            color: #5DBB63;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #333333;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        p {
+            color: #555555;
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+            margin-top: 0;
+        }
+        ul li {
+            color: #555555;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .code-container {
+            text-align: left;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-family: Consolas, monaco, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #ddd;
+        }
+        .code-heading {
+            color: #5DBB63;
+            margin-bottom: 15px;
+        }
+        dotlottie-player {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <a href=https://www.google.com>link</a>
+    <div class="content">
+        <h2>Business Case Implementation</h2>
+        <h3>Business Case: Students Performance Tracking</h3>
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player src="https://lottie.host/43a70640-92be-442e-a0be-2af0ed9a9c18/a2gQ2Ma01f.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+        
+        <p>The program integrates <b>Arrays</b>, <b>Linked Lists</b>, and <b>Binary Search Trees (BST)</b> to track students' performance. Here's how each data structure is utilized:</p>
+
+        <h3>1. Arrays</h3>
+        <p><b>Purpose:</b> To store and manage options/menu selection in a user-friendly way (implicit through inputs). The student's <b>id</b>, <b>name</b>, and <b>cgpa</b> are accepted as inputs, but arrays are not directly used for storage in this implementation. They can be added for batch operations or preloaded data.</p>
+
+        <h3>2. Linked Lists</h3>
+        <p><b>Purpose:</b> Maintains the sequence of insertion for students.</p>
+        <p><b>Implementation:</b></p>
+        <ul>
+            <li>A linked list is used where each <b>Student</b> node contains:</li>
+            <ul>
+                <li><b>id:</b> Unique identifier for the student.</li>
+                <li><b>name:</b> Student's name.</li>
+                <li><b>cgpa:</b> Cumulative Grade Point Average.</li>
+                <li><b>next:</b> Pointer to the next <b>Student</b> node.</li>
+            </ul>
+            <li>The <b>head</b> pointer keeps track of the start of the linked list.</li>
+        </ul>
+        <p><b>Operations:</b></p>
+        <ul>
+            <li><b>Insertion:</b> New students are added at the beginning of the list (<i>addStudent</i>).</li>
+            <li><b>Traversal:</b> Iterates through the list to display all students (<i>viewAllStudents</i>).</li>
+        </ul>
+
+        <h3>3. Binary Search Tree (BST)</h3>
+        <p><b>Purpose:</b> Enables quick searching and sorted access to students based on their IDs.</p>
+        <p><b>Implementation:</b></p>
+        <ul>
+            <li>A BST is used where each node contains:</li>
+            <ul>
+                <li><b>id:</b> Used as the key for sorting.</li>
+                <li><b>name</b> and <b>cgpa:</b> Additional student data.</li>
+                <li><b>left</b> and <b>right:</b> Pointers to the left and right child nodes.</li>
+            </ul>
+        </ul>
+        <p><b>Operations:</b></p>
+        <ul>
+            <li><b>Insertion:</b> New students are added recursively based on their <b>id</b> (<i>insertBST</i>).</li>
+            <li><b>Traversal:</b> In-order traversal is used to display students in ascending order of their IDs (<i>viewStudentsByPerformance</i>).</li>
+            <li><b>Search:</b> Efficiently locates a student by ID (<i>searchBST</i>).</li>
+        </ul>
+
+        <h3>How the Data Structures Work Together</h3>
+        <ul>
+            <li><b>Linked List:</b> Keeps a record of students in the order they are entered. Useful for displaying raw data in the order of insertion.</li>
+            <li><b>BST:</b> Stores students based on <b>id</b> for sorted access and fast searching. Helps display students in ascending order of their IDs.</li>
+            <li><b>Integration:</b> Each student's data is added to both the linked list and the BST. The linked list handles sequential operations, while the BST ensures efficient lookups and ordered display.</li>
+        </ul>
+        <p>This hybrid implementation leverages the strengths of each data structure, ensuring flexibility (<b>linked list</b>), efficiency (<b>BST</b>), and potential for extension (<b>arrays</b>, batch operations).</p>
+
+        <div class="content">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/2a7feb3e-a5ac-4624-8a06-85510917d799/hxgOMx8PRG.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player></div>
+        
+        <h2 class="code-heading">The Relevant Sustainable Development Goals For Student Performance Tracking Are:</h2>
+        <h4 style="text-align: left;">SDG 4: Quality Education</h4>
+        <p>Ensure inclusive and equitable quality education by tracking and improving student outcomes.</p>
+        <h4 style="text-align: left;">SDG 9: Industry, Innovation, and Infrastructure</h4>
+        <p>Leverage innovative technologies like AI and analytics to create robust tracking systems.</p>
+        <h4 style="text-align: left;">SDG 10: Reduced Inequalities</h4>
+        <p>Ensure equal opportunities by identifying gaps and providing personalized interventions for students from diverse backgrounds.</p>
+        <h4 style="text-align: left;">SDG 17: Partnerships for the Goals</h4>
+        <p>Collaborate with stakeholders (faculty, parents, and policymakers) to enhance the impact of performance monitoring systems.</p>
+
+<h2 class="code-heading">IMPLEMENTED C++ CODE</h2>
+        <div class="code-container">
+            <code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+struct Student {
+    int id;
+    string name;
+    double cgpa;
+    Student* next;
+};
+
+// Binary Search Tree Node
+struct BSTNode {
+    int id;
+    string name;
+    double cgpa;
+    BSTNode* left;
+    BSTNode* right;
+};
+
+class UniversityPerformance {
+private:
+    Student* head; // Linked list for all students
+    BSTNode* root; // BST for quick search
+
+    BSTNode* insertBST(BSTNode* root, int id, string name, double cgpa) {
+        if (root == nullptr) {
+            BSTNode* newNode = new BSTNode{id, name, cgpa, nullptr, nullptr};
+            return newNode;
+        }
+        if (id &lt; root-&gt;id)
+            root-&gt;left = insertBST(root-&gt;left, id, name, cgpa);
+        else if (id &gt; root-&gt;id)
+            root-&gt;right = insertBST(root-&gt;right, id, name, cgpa);
+        return root;
+    }
+
+    void inOrderTraversal(BSTNode* root) {
+        if (root != nullptr) {
+            inOrderTraversal(root-&gt;left);
+            cout &lt;&lt; "ID: " &lt;&lt; root-&gt;id &lt;&lt; ", Name: " &lt;&lt; root-&gt;name &lt;&lt; ", CGPA: " &lt;&lt; root-&gt;cgpa &lt;&lt; endl;
+            inOrderTraversal(root-&gt;right);
+        }
+    }
+
+    BSTNode* searchBST(BSTNode* root, int id) {
+        if (root == nullptr || root-&gt;id == id)
+            return root;
+        if (id &lt; root-&gt;id)
+            return searchBST(root-&gt;left, id);
+        return searchBST(root-&gt;right, id);
+    }
+
+public:
+    UniversityPerformance() : head(nullptr), root(nullptr) {}
+
+    void addStudent(int id, string name, double cgpa) {
+        // Add to linked list
+        Student* newStudent = new Student{id, name, cgpa, head};
+        head = newStudent;
+
+        // Add to BST
+        root = insertBST(root, id, name, cgpa);
+
+        cout &lt;&lt; "Student added successfully!" &lt;&lt; endl;
+    }
+
+    void viewAllStudents() {
+        cout &lt;&lt; "\n--- All Students (Linked List) ---\n";
+        Student* current = head;
+        while (current != nullptr) {
+            cout &lt;&lt; "ID: " &lt;&lt; current-&gt;id &lt;&lt; ", Name: " &lt;&lt; current-&gt;name &lt;&lt; ", CGPA: " &lt;&lt; current-&gt;cgpa &lt;&lt; endl;
+            current = current-&gt;next;
+        }
+    }
+
+    void viewStudentsByPerformance() {
+        cout &lt;&lt; "\n--- Students by Performance (BST) ---\n";
+        inOrderTraversal(root);
+    }
+
+    void searchStudent(int id) {
+        cout &lt;&lt; "\n--- Search Result ---\n";
+        BSTNode* result = searchBST(root, id);
+        if (result != nullptr) {
+            cout &lt;&lt; "ID: " &lt;&lt; result-&gt;id &lt;&lt; ", Name: " &lt;&lt; result-&gt;name &lt;&lt; ", CGPA: " &lt;&lt; result-&gt;cgpa &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "Student with ID " &lt;&lt; id &lt;&lt; " not found!" &lt;&lt; endl;
+        }
+    }
+};
+
+int main() {
+    UniversityPerformance up;
+    int choice;
+
+    do {
+        cout &lt;&lt; "\n--- University Performance Tracking System ---\n";
+        cout &lt;&lt; "1. Add Student\n";
+        cout &lt;&lt; "2. View All Students\n";
+        cout &lt;&lt; "3. View Students by Performance\n";
+        cout &lt;&lt; "4. Search Student\n";
+        cout &lt;&lt; "5. Exit\n";
+        cout &lt;&lt; "Enter your choice: ";
+        cin &gt;&gt; choice;
+
+        switch (choice) {
+            case 1: {
+                int id;
+                string name;
+                double cgpa;
+                cout &lt;&lt; "Enter Student ID: ";
+                cin &gt;&gt; id;
+                cin.ignore(); // Ignore newline character
+                cout &lt;&lt; "Enter Student Name: ";
+                getline(cin, name);
+                cout &lt;&lt; "Enter Student CGPA: ";
+                cin &gt;&gt; cgpa;
+                up.addStudent(id, name, cgpa);
+                break;
+            }
+            case 2:
+                up.viewAllStudents();
+                break;
+            case 3:
+                up.viewStudentsByPerformance();
+                break;
+            case 4: {
+                int id;
+                cout &lt;&lt; "Enter Student ID to Search: ";
+                cin &gt;&gt; id;
+                up.searchStudent(id);
+                break;
+            }
+            case 5:
+                cout &lt;&lt; "Exiting program. Goodbye!" &lt;&lt; endl;
+                break;
+            default:
+                cout &lt;&lt; "Invalid choice. Please try again." &lt;&lt; endl;
+        }
+    } while (choice != 5);
+
+    return 0;
+}
+            </code>
+        </div>
+    </div>
+</body>
+</html>
