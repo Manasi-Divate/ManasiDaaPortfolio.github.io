@@ -145,7 +145,147 @@
         <h4 style="text-align: left;">SDG 17: Partnerships for the Goals</h4>
         <p>Collaborate with stakeholders (faculty, parents, and policymakers) to enhance the impact of performance monitoring systems.</p>
 
-<h2 class="code-heading">IMPLEMENTED C++ CODE</h2>
+        <h2 class="code-heading">ALGORITHMS USED</h2>
+        <h4 class="code-heading">1. Array Algorithm</h4>
+        <p>Class Array:<br>
+            size          // Maximum size of the array<br>
+            length        // Current number of elements in the array<br>
+            arr[]         // Array to store elements<br>
+        
+            Constructor(size):<br>
+                this.size = size<br>
+                this.length = 0<br>
+                Initialize arr with size<br>
+            InsertAtEnd(element):<br>
+                If length == size:<br>
+                    Print("Array is full")<br>
+                    Return<br>
+                arr[length] = element<br>
+                length = length + 1<br>
+            InsertAtPosition(position, element):<br>
+                If position < 0 OR position > length OR length == size:<br>
+                    Print("Invalid position or Array is full")<br>
+                    Return<br>
+                For i from length-1 to position:<br>
+                    arr[i+1] = arr[i]<br>
+                arr[position] = element<br>
+                length = length + 1<br>
+            DeleteAtPosition(position):<br>
+                If position < 0 OR position >= length:<br>
+                    Print("Invalid position")<br>
+                    Return<br>
+                For i from position to length-2:<br>
+                    arr[i] = arr[i+1]<br>
+                length = length - 1<br>
+            Search(element):<br>
+                For i from 0 to length-1:<br>
+                    If arr[i] == element:<br>
+                        Return i<br>
+                Return -1<br>
+            Display():<br>
+                If length == 0:<br>
+                    Print("Array is empty")<br>
+                    Return<br>
+                For i from 0 to length-1:<br>
+                    Print(arr[i], " ")<br>       
+        </p>
+        <h4 class="code-heading">2. LinkedList Algorithm</h4>
+        <p>Class Node:<br>
+            data       // Holds the value<br>
+            next       // Pointer to the next node<br>
+        
+            Constructor(data):<br>
+                this.data = data<br>
+                this.next = NULL<br>
+                Class LinkedList:<br>
+                head       // Pointer to the first node<br>
+            
+                Constructor():<br>
+                    head = NULL<br>
+                    InsertAtBeginning(data):<br>
+    newNode = Create Node(data)<br>
+    newNode.next = head<br>
+    head = newNode<br>
+    InsertAtEnd(data):<br>
+    newNode = Create Node(data)<br>
+    If head is NULL:<br>
+        head = newNode<br>
+        Return<br>
+    temp = head<br>
+    While temp.next != NULL:<br>
+        temp = temp.next<br>
+    temp.next = newNode<br>
+    DeleteNode(key):<br>
+    If head is NULL:<br>
+        Return<br>
+    If head.data == key:<br>
+        head = head.next<br>
+        Return<br>
+    temp = head<br>
+    prev = NULL<br>
+    While temp != NULL and temp.data != key:<br>
+        prev = temp<br>
+        temp = temp.next<br>
+    If temp is NULL:<br>
+        Return<br>
+    prev.next = temp.next<br>
+    Traverse():<br>
+    temp = head<br>
+    While temp != NULL:<br>
+        Print(temp.data, " -> ")<br>
+        temp = temp.next<br>
+    Print("NULL")<br>             
+        </p>
+    <h4 class="code-heading">3. BinarySearchTree Algorithm</h4>
+    <p>Class Node:<br> 
+        data<br> 
+        left<br> 
+        right<br> 
+    
+        Constructor(data):<br> 
+            this.data = data<br> 
+            this.left = NULL<br> 
+            this.right = NULL<br> 
+            Class BST:<br> 
+            root<br> 
+        
+            Constructor():<br> 
+                root = NULL<br> 
+                Insert(root, key):<br> 
+                If root is NULL:<br> 
+                    Return Create Node(key)<br> 
+                If key < root.data:<br> 
+                    root.left = Insert(root.left, key)<br> 
+                Else:<br> 
+                    root.right = Insert(root.right, key)<br> 
+                Return root<br> 
+                Search(root, key):<br> 
+                If root is NULL or root.data == key:<br> 
+                    Return root<br> 
+                If key < root.data:<br> 
+                    Return Search(root.left, key)<br> 
+                Else:<br> 
+                    Return Search(root.right, key)<br> 
+                    Delete(root, key):<br> 
+                    If root is NULL:<br> 
+                        Return NULL<br> 
+                    If key < root.data:<br> 
+                        root.left = Delete(root.left, key)<br> 
+                    Else If key > root.data:<br> 
+                        root.right = Delete(root.right, key)<br> 
+                    Else:<br> 
+                        If root.left is NULL:<br> 
+                            Return root.right<br> 
+                        Else If root.right is NULL:<br> 
+                            Return root.left<br> 
+                        temp = FindMin(root.right)<br> 
+                        root.data = temp.data<br> 
+                        root.right = Delete(root.right, temp.data)<br> 
+                    Return root<br> 
+                </p>
+
+        <h2 class="code-heading">IMPLEMENTED C++ CODE</h2>
+
         <div class="code-container">
             <code>
 #include &lt;iostream&gt;
